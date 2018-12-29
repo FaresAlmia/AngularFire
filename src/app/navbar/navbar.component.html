@@ -1,0 +1,16 @@
+<div id='cssmenu'>
+   <ul>
+      <li routerLinkActive="active"><a routerLink="/home"><span>Accueil</span></a></li>
+      <li><a routerLink="/admin" *ngIf="isAuth"><span>Admin</span></a></li>
+      <li class="connect" routerLinkActive="active" *ngIf="!isAuth"><a routerLink="signup" class="connect"><span>Inscription</span></a></li>
+      <li class="connect" routerLinkActive="active" *ngIf="!isAuth"><a routerLink="/auth/signin" class="connect"><span>Connexion</span></a></li>
+      <li class="connect"><a (click)="onSignOut()" *ngIf="isAuth"><span>Déconnexion</span></a></li>
+      <li class="connect"><a (click)="onViewUser()" *ngIf="isAuth"><span>Compte</span></a></li>
+   </ul>
+   <div id="recruteur"> <button class="btn btn-warning" routerLink="/offerform">
+         <h4>Espace Recruteur
+            
+         </h4>
+      </button>
+   </div>
+</div>

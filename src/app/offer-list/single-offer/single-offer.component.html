@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col">
+      <br>
+      <div>
+      <h1>{{offer.title}}</h1>
+      <div class="row">
+      <div class="col-sm-2 imgg"><br><img class="logoentreprise1" src="assets/img/entreprise.png">
+      <br>
+      <p class="font-weight-bold">Détails de l'offre : </p>  
+      <p class="font-weight-normal">Entreprise : {{offer.entreprise}} </p>  
+      <p class="font-weight-normal">Secteur : {{offer.secteur}} </p>
+      <p class="font-weight-normal">Type de contrat : {{offer.typecontrat}} </p>
+      
+      </div>
+      <div class="col descr">
+      <br>
+      <h4 class="font-weight-bold">Description : </h4>
+      <br>
+        <p class="font-weight-normal textdescr">{{offer.description}}</p>
+      </div>
+    </div>  
+    </div>
+      <button (click)="onBack()" >Retour</button>
+    
+    </div>

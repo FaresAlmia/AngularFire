@@ -1,0 +1,100 @@
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Set a style for all buttons */
+button {
+    background-color: #8B4513;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    outline: none;
+    }
+
+button:hover {
+    opacity: 0.8;
+    outline: none;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #8B4513;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    
+    border-radius: 50%;
+    width: 10%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatefade 0.6s;
+    animation: animatefade 0.6s;  
+}
+
+@-webkit-keyframes animatefade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes animatefade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes animatefade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes animatefade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+       text-decoration: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+} 

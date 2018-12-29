@@ -1,0 +1,51 @@
+<div class="container cont1">
+    <h3 class="display-4" style="text-align: center">Recherche d'emploi</h3>
+
+    <!-- Barre de recherche + Loupe -->
+
+    <div class="container">
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-search h4 text-body"></i>
+                        </div>
+                        <!--end of col-->
+                        <div class="col">
+                            <input class="form-control form-control-lg form-control-borderless" [(ngModel)]="term"
+                                [ngModelOptions]="{standalone: true}" type="search" placeholder="Mot-clé (ex: Commercial)">
+                        </div>
+                        <!--end of col-->
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" type="submit">Rechercher</button>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                </form>
+            </div>
+            <!--end of col-->
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="card">
+
+        <div class="card">
+            <div class="list-group-item" *ngFor="let offer of offers | search : term ; let i = index  ">
+                <h3 class="list-group-item-text" (click)="onViewOffer(i)">
+                    <a class="titledescription">{{offer.title}}</a>
+                </h3>
+                <div class="row">
+                    <div class="logoentreprise"> <img class="logoentreprise1" src="assets/img/entreprise.png"> </div>
+                    <div class="col">
+                        <p class="list-group-item-text">{{offer.description| slice:0:400}} ...</p>
+                    </div>
+                </div>
+                <button class="btn" (click)="onDeleteOffer(offer)" *ngIf="isAuth">Supprimer l'offre
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

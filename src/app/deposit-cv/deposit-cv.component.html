@@ -1,0 +1,22 @@
+	<!-- Upload File -->
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <div class="animate">
+  <div class="file-upload">
+    <div class="image-upload-wrap">
+      <input class="file-upload-input" type='file' onchange="readURL(this);" accept="application/pdf/*" />
+      <div class="drag-text">
+        <h3>Glisser et déposer votre fichier ici.</h3>
+      </div>
+    </div><br>
+    <button  onclick="$('.file-upload-input').trigger( 'click' )">Ajouter votre CV</button>
+
+    <div class="file-upload-content">
+      <img class="file-upload-image" src="#" alt="your image" />
+      <div class="image-title-wrap">
+                 <div><span class="image-title"></span></div>
+        <button type="button" onclick="removeUpload()" class="remove-image">Effacer</button>
+            <button type="button" onclick="sendUpload()" class="send-image">Envoyer</button>
+          </div>
+    </div>
+  </div>
+</div>

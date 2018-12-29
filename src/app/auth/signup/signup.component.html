@@ -1,0 +1,40 @@
+<div class="col-sm-5 col-sm-offset-2">
+  <br>
+  <h2>Créer un compte</h2>
+  <br>
+  <!-- Utilistation de Reactive Forms, un des modules proposés par Angular pour la conception de formulaire -->
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm">
+          <label for="lastname">Nom :</label>
+          <input type="text" id="lastname" class="form-control" formControlName="lastname">
+        </div>
+        <div class="col-sm">
+          <label for="name">Prénom :</label>
+          <input type="text" id="name" class="form-control" formControlName="name">
+        </div>
+      </div>
+      <label for="lastname">Date de naissance :</label>
+      <input type="date" id="birthdate" class="form-control" formControlName="birthdate">
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail :</label>
+      <input type="text" id="email" class="form-control" formControlName="email">
+      <label for="phone">Numéro de téléphone :</label>
+      <input type="text" id="phone" class="form-control" formControlName="phone">
+      <label for="fonction">Fonction :</label>
+      <select style="margin-left: 5px;" id="fonction" formControlName="fonction">
+        <option value="employé">Employé</option>
+        <option value="employeur">Employeur</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" class="form-control" formControlName="password" required>
+    </div>
+    <button class="btn" type="submit" [disabled]="signUpForm.invalid">Créer mon compte </button>
+    <br><br><a style="color:blue" routerLink="/auth/signin">Déjà inscrit ? Connectez vous !</a>
+  </form>
+  <p class="text-danger">{{ errorMessage }}</p>
+</div>
